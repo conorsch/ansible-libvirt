@@ -1,7 +1,7 @@
 ---
 # vars file for libvirt (Debian specific)
 
-libvirt_packages:
+__libvirt_packages:
   - libvirt0
 
-libvirt_service_name: libvirtd.service
+__libvirt_service_name: libvirtd.service

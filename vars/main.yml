@@ -1,4 +1,4 @@
 ---
 # vars file for libvirt
 
-libvirt_service_name: libvirt-bin
+__libvirt_service_name: libvirt-bin

@@ -1,5 +1,5 @@
 ---
 # vars file for libvirt (Ubuntu specific)
 
-libvirt_packages:
+__libvirt_packages:
   - libvirt-bin

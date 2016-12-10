@@ -2,12 +2,19 @@
 # tasks file for libvirt
 
 - name: Include distribution specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}.yml"
-    - main.yml
+  include_vars: "{{ ansible_distribution }}.yml"
   tags:
     - libvirt
+
+- name: Set libvirt service name.
+  set_fact:
+    libvirt_service_name: "{{ __libvirt_service_name }}"
+  when: libvirt_service_name is not defined
+
+- name: Set libvirt packages.
+  set_fact:
+    libvirt_packages: "{{ __libvirt_packages }}"
+  when: libvirt_packages is not defined
 
 # Install packages via apt.
 - include: Ubuntu.yml

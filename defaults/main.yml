@@ -1,6 +1,10 @@
 ---
 # defaults file for libvirt
 
+# Distro-specific var overrides will take precedence if `libvirt_packages`
+# is undefined. Set it at the site level to install custom packages.
+#libvirt_packages: []
+
 libvirt_libvirtd_listen_tls: 1
 libvirt_libvirtd_listen_tcp: 0
 libvirt_libvirtd_tls_port: 0
